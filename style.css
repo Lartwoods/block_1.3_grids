@@ -1,0 +1,269 @@
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('assets/fonts/TTLakesCompressed-Light.woff2') format('woff2'),
+       url('assets/fonts/TTLakesCompressed-Light.woff') format('woff');
+  
+}
+
+@font-face {
+  font-family: 'TT Lakes Bold';
+  src: url('assets/fonts/TTLakes-Black2.woff2') format('woff2'),
+      url('assets/fonts/TTLakesCompressed-Light.woff') format('woff');
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+html,
+body {
+  min-width: 320px;
+  height: fit-content;
+  color: #1B1C21;
+  font-family: 'TT Lakes', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  overflow-x: hidden;
+}
+
+/*----------------------header style-----------------*/
+
+.header__container {
+  max-width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header__button,
+.services__reviews-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.header__list,
+.header__left,
+.header__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__left,
+.header__right {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+}
+
+.header__item.tablet__logo {
+  display: none;
+}
+
+.header__item_img {
+  width: 40px;
+  height: 40px;
+}
+
+.header__item--logo {
+  width: 96px;
+  height: auto;
+  max-width: 160px;
+}
+
+.header__list {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.header__item_border {
+  width: 2px;
+  height: 32px;
+  margin: 0 10px;
+  background-color: #B8FFEC;
+}
+
+/*-----------main style-------------------------------------------*/
+
+.services {
+  display: flex;
+  flex-direction: column;
+  background-color: #F8F8F8;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.services__head {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  font-size: 2rem;
+  margin: 10px 0;
+  padding: 0 5%;
+  border-left: 4px solid #41F6D7;
+}
+
+.services__nav {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+} 
+
+.services__nav--list {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  padding-left: 20px;
+  overflow-x: auto;
+}
+
+.services__nav--list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+  height: 40px;
+  font-size: 1rem;
+  margin-right: 10px;
+  border: 2px solid #B8FFEC;
+  border-radius: 6px;
+  background-color: white;
+  }
+  .services__reviews-button{
+    display: none;
+  }
+.services__text{
+  padding: 20px;
+}
+.services__text p {
+  width: 100%;
+}
+
+.services__text--hide {
+  display: none;
+}
+
+.services__img-file {
+  width: 100%;
+  box-sizing: border-box;
+}
+.services__expand{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 3% 0;
+}
+.services__button {
+  position: relative;
+  font-family: 'TT Lakes Bold';
+  font-size: 1.1rem;
+  background-color: #F8F8F8;
+  margin-left: 30px;
+}
+.services__button:hover{
+  cursor: pointer;
+}
+.services__expand:active{
+  transform: scale(0.99) ;
+  background-color: #f3fffc;
+}
+.services__button::before {
+  content: "";
+  display: inline-block;
+  background: url('assets/logo/expand.png') no-repeat center center;
+  width: 24px; 
+  height: 24px; 
+  background-size: contain; 
+  margin:0  10px 0 -30px; 
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%);  
+}
+
+.services__img-file {
+  width: 96%;
+  padding: 2%;
+}
+
+@media (min-width: 768px) {
+  .header__item.tablet__logo {
+    display: inline-block;
+  }
+  .services__nav--list{
+  display: flex;
+  justify-content: flex-start;
+  padding-left:50px;
+  }
+  .services__about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .services__info,
+  .services__img{
+   flex:1;
+  }
+  .services__text{
+    padding: 50px;
+  }
+  .services__text--hide{
+    display: block;
+    padding: 3% 0;
+  }
+  .services__about{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+  }
+.header__list,
+.header__left,
+.header__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__left{
+justify-content: flex-start;
+flex: 1;
+}
+.header__left li{
+padding: 20px;
+}
+}
+
+@media (min-width: 1120px) {
+  .header__item.tablet__logo,
+  .header__item_border {
+    display: none;
+  }
+  .services__reviews-button{
+    display: block ;
+    font-family: 'TT Lakes Bold';
+    font-size: 24px;
+    color: #7E7E82;
+    padding: 0 60px;
+  }
+}
