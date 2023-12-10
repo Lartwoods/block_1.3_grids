@@ -51,6 +51,7 @@ body {
   max-width: 100%;
   padding: 0;
   box-sizing: border-box;
+  border-bottom: 1px solid #D9FFF5;
 }
 .header__button,
 .services__reviews-button {
@@ -120,7 +121,9 @@ body {
   padding: 0 5%;
   border-left: 4px solid #41F6D7;
 }
-
+.services__clients-buttons{
+  display: none;
+}
 .services__nav {
   width: 100%;
   overflow-x: auto;
@@ -132,23 +135,24 @@ body {
 .services__nav--list {
   width: auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  max-width: 100%;
   padding-left: 20px;
   overflow-x: auto;
 }
 
 .services__nav--list li {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   padding: 0 10px;
   height: 40px;
   font-size: 1rem;
   margin-right: 10px;
-  border: 2px solid #B8FFEC;
+  }
+  .services__nav--list li.checked{
+    border: 2px solid #B8FFEC;
   border-radius: 6px;
   background-color: white;
   }
@@ -231,7 +235,9 @@ body {
   }
   .services__text--hide{
     display: block;
+    height: 50px;
     padding: 3% 0;
+    overflow-y: hidden;
   }
   .services__about{
     display: flex;
@@ -252,12 +258,47 @@ flex: 1;
 .header__left li{
 padding: 20px;
 }
+.services__nav--list li{
+  font-size: 1.5rem;
+  padding: 0 30px;
+}
 }
 
 @media (min-width: 1120px) {
-  .header__item.tablet__logo,
-  .header__item_border {
+  header{
     display: none;
+  }
+  .services__head{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0 5%;
+  }
+  .services__head h1{
+    font-size: 2.3rem;
+    font-weight: bold;
+  }
+  .services__clients-buttons{
+    display: flex;
+    width: 30%;
+    
+  }
+  .services__clients-buttons--item{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F8F8;
+    font-family: 'TT Lakes Bold';
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .services__clients-buttons--img{
+    margin-left: 5% ;
+  }
+  .services__text--hide{
+   height: fit-content;
+    overflow-y:visible;
   }
   .services__reviews-button{
     display: block ;
@@ -266,4 +307,9 @@ padding: 20px;
     color: #7E7E82;
     padding: 0 60px;
   }
+  .services__nav--list{
+    display: flex;
+    justify-content: center;
+  }
+  
 }
