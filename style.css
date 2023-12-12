@@ -54,7 +54,7 @@ body {
   box-sizing: border-box;
   border-bottom: 1px solid #D9FFF5;
 }
-.header__button,
+.button,
 .services__reviews-button {
   background: none;
   border: none;
@@ -353,7 +353,7 @@ padding: 20px;
     background-image: url(assets/logo/tablet/ic/checkstatus.png);
    
   }
-  .services__clients-buttons--item{
+  .services__clients-buttons_item{
     width: 50%;
     display: flex;
     justify-content: center;
